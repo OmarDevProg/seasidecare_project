@@ -1,0 +1,48 @@
+security:
+    # Configuration des encodeurs de mot de passe
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+        App\Entity\User:
+            algorithm: auto
+
+    # Définir les fournisseurs d'utilisateurs
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email  # Utilisation de l'email pour l'authentification
+
+    # Configuration des firewalls
+    firewalls:
+        # Configuration pour la zone de développement (ne pas sécuriser cette zone)
+        dev:
+            pattern: ^/(profiler|wdt|css|images|js)/
+            security: false
+
+        # Configuration de la zone principale
+        main:
+            # Permet de n'appliquer l'authentification qu'aux pages qui en ont besoin
+            pattern: ^/(?!login).*
+            provider: app_user_provider
+            # Active l'authentification par formulaire
+            form_login:
+                login_path: app_login  # La route pour la page de connexion
+                check_path: app_login  # La route pour vérifier l'authentification (généralement la même)
+                default_target_path: home  # Où rediriger après une connexion réussie
+            # Gestion de la déconnexion
+            logout:
+                path: app_logout  # La route de déconnexion
+                target: app_login  # Où rediriger après la déconnexion (souvent la page de connexion)
+
+            # Permet d'utiliser un cookie pour maintenir l'utilisateur connecté
+            remember_me:
+                secret: '%kernel.secret%'  # Clé secrète pour la gestion du cookie 'remember me'
+
+    # Contrôle d'accès
+    access_control:
+        # Accès à la page de connexion (accessible par tous)
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        # Accès au profil, uniquement pour les utilisateurs connectés
+        - { path: ^/profile, roles: ROLE_USER }
+        # Accès à l'administration, uniquement pour les administrateurs
+        - { path: ^/admin, roles: ROLE_ADMIN }

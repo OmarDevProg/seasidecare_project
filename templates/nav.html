@@ -1,0 +1,936 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="link" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 19a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0-4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm-5 0a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm7-12h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3Zm1 17a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9h16Zm0-11H4V6a1 1 0 0 1 1-1h1v1a1 1 0 0 0 2 0V5h8v1a1 1 0 0 0 2 0V5h1a1 1 0 0 1 1 1ZM7 15a1 1 0 1 0-1-1a1 1 0 0 0 1 1Zm0 4a1 1 0 1 0-1-1a1 1 0 0 0 1 1Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-right" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.92 11.62a1 1 0 0 0-.21-.33l-5-5a1 1 0 0 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1 1 0 0 0 0 1.42a1 1 0 0 0 1.42 0l5-5a1 1 0 0 0 .21-.33a1 1 0 0 0 0-.76Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="category" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 5.5h-6.28l-.32-1a3 3 0 0 0-2.84-2H5a3 3 0 0 0-3 3v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-10a3 3 0 0 0-3-3Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h4.56a1 1 0 0 1 .95.68l.54 1.64a1 1 0 0 0 .95.68h7a1 1 0 0 1 1 1Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="calendar" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="heart" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20.16 4.61A6.27 6.27 0 0 0 12 4a6.27 6.27 0 0 0-8.16 9.48l7.45 7.45a1 1 0 0 0 1.42 0l7.45-7.45a6.27 6.27 0 0 0 0-8.87Zm-1.41 7.46L12 18.81l-6.75-6.74a4.28 4.28 0 0 1 3-7.3a4.25 4.25 0 0 1 3 1.25a1 1 0 0 0 1.42 0a4.27 4.27 0 0 1 6 6.05Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="plus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11h-6V5a1 1 0 0 0-2 0v6H5a1 1 0 0 0 0 2h6v6a1 1 0 0 0 2 0v-6h6a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="minus" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 11H5a1 1 0 0 0 0 2h14a1 1 0 0 0 0-2Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="cart" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M8.5 19a1.5 1.5 0 1 0 1.5 1.5A1.5 1.5 0 0 0 8.5 19ZM19 16H7a1 1 0 0 1 0-2h8.491a3.013 3.013 0 0 0 2.885-2.176l1.585-5.55A1 1 0 0 0 19 5H6.74a3.007 3.007 0 0 0-2.82-2H3a1 1 0 0 0 0 2h.921a1.005 1.005 0 0 1 .962.725l.155.545v.005l1.641 5.742A3 3 0 0 0 7 18h12a1 1 0 0 0 0-2Zm-1.326-9l-1.22 4.274a1.005 1.005 0 0 1-.963.726H8.754l-.255-.892L7.326 7ZM16.5 19a1.5 1.5 0 1 0 1.5 1.5a1.5 1.5 0 0 0-1.5-1.5Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18.71 7.21a1 1 0 0 0-1.42 0l-7.45 7.46l-3.13-3.14A1 1 0 1 0 5.29 13l3.84 3.84a1 1 0 0 0 1.42 0l8.16-8.16a1 1 0 0 0 0-1.47Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="trash" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M10 18a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1ZM20 6h-4V5a3 3 0 0 0-3-3h-2a3 3 0 0 0-3 3v1H4a1 1 0 0 0 0 2h1v11a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8h1a1 1 0 0 0 0-2ZM10 5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1h-4Zm7 14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8h10Zm-3-1a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="star-outline" viewBox="0 0 15 15">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.5 9.804L5.337 11l.413-2.533L4 6.674l2.418-.37L7.5 4l1.082 2.304l2.418.37l-1.75 1.793L9.663 11L7.5 9.804Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="star-solid" viewBox="0 0 15 15">
+        <path fill="currentColor" d="M7.953 3.788a.5.5 0 0 0-.906 0L6.08 5.85l-2.154.33a.5.5 0 0 0-.283.843l1.574 1.613l-.373 2.284a.5.5 0 0 0 .736.518l1.92-1.063l1.921 1.063a.5.5 0 0 0 .736-.519l-.373-2.283l1.574-1.613a.5.5 0 0 0-.283-.844L8.921 5.85l-.968-2.062Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="search" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="user" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.71 12.71a6 6 0 1 0-7.42 0a10 10 0 0 0-6.22 8.18a1 1 0 0 0 2 .22a8 8 0 0 1 15.9 0a1 1 0 0 0 1 .89h.11a1 1 0 0 0 .88-1.1a10 10 0 0 0-6.25-8.19ZM12 12a4 4 0 1 1 4-4a4 4 0 0 1-4 4Z"/>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 15 15">
+        <path fill="currentColor" d="M7.953 3.788a.5.5 0 0 0-.906 0L6.08 5.85l-2.154.33a.5.5 0 0 0-.283.843l1.574 1.613l-.373 2.284a.5.5 0 0 0 .736.518l1.92-1.063l1.921 1.063a.5.5 0 0 0 .736-.519l-.373-2.283l1.574-1.613a.5.5 0 0 0-.283-.844L8.921 5.85l-.968-2.062Z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="preloader-wrapper">
+    <div class="preloader">
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="MyCart">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <!-- Cart Header with Icon -->
+        <h4 class="d-flex justify-content-between align-items-center mb-4">
+          <span class="text-primary d-flex align-items-center">
+            <i class="bi bi-cart4 me-2"></i>Panier
+          </span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        
+        <!-- Cart Items List -->
+        <ul class="list-group mb-4">
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (USD)</span>
+            <strong>$20.00</strong>
+          </li>
+        </ul>
+        
+        <!-- Action Buttons -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-outline-primary btn-lg" type="button">Voir le panier</button>
+          <button class="btn btn-primary btn-lg" type="submit">Commander</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bootstrap Icons (Ensure you have Bootstrap Icons CDN included in your project) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+     
+  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasSearch" aria-labelledby="Search">
+    <div class="offcanvas-header justify-content-center">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Rechercher</span>
+        </h4>
+        <form role="search" action="index.html.twig" method="get" class="d-flex mt-3 gap-0">
+          <input class="form-control rounded-start rounded-0 bg-light" type="email" placeholder="What are you looking for?" aria-label="What are you looking for?">
+          <button class="btn btn-dark rounded-end rounded-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container-fluid">
+      <div class="row py-3 border-bottom">
+        
+        <div class="col-sm-4 col-lg-3 text-center text-sm-start">
+          <div class="main-logo">
+            <a href="index.html.twig">
+              <img src="../public/images/logo.png" alt="logo" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 offset-sm-2 offset-md-0 col-lg-5 d-none d-lg-block">
+          <div class="search-bar row bg-light p-2 my-2 rounded-4">
+            <div class="col-md-4 d-none d-md-block">
+              <select class="form-select border-0 bg-transparent">
+                <option>All Categories</option>
+                <option>Groceries</option>
+                <option>Drinks</option>
+                <option>Chocolates</option>
+              </select>
+            </div>
+            <div class="col-11 col-md-7">
+              <form id="search-form" class="text-center" action="index.html.twig" method="post">
+                <input type="text" class="form-control border-0 bg-transparent" placeholder="Cherchez le produit qui vous convient" />
+              </form>
+            </div>
+            <div class="col-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z"/></svg>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-8 col-lg-4 d-flex justify-content-end gap-5 align-items-center mt-4 mt-sm-0 justify-content-center justify-content-sm-end">
+          <div class="support-box text-end d-none d-xl-block">
+            <span class="fs-6 text-muted">For Support?</span>
+            <h5 class="mb-0">+216-24006483</h5>
+          </div>
+
+          <ul class="d-flex justify-content-end list-unstyled m-0">
+        <!-- Trigger Button -->
+        <li>
+          <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="modal" data-bs-target="#signInModal">
+            <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#user"></use></svg>
+          </a>
+        </li>
+        
+        <!-- Sign In Modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="emailOrPhone" class="form-label">E-mail Address or Mobile Phone Number</label>
+                    <input type="text" class="form-control" id="emailOrPhone" placeholder="Enter your email or phone">
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Sign In</button>
+                </form>
+                <div class="text-center mt-3">
+                  <p>Don't have an account? 
+                    <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#createAccountModal" data-bs-dismiss="modal">Create Account</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Create Account Modal -->
+        <div class="modal fade" id="createAccountModal" tabindex="-1" aria-labelledby="createAccountModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="createAccountModalLabel">Create Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="newEmail" class="form-label" style=" color: black; font-weight: bold;" >Your name</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="First and last name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="newEmail" class="form-label" style=" color: black; font-weight: bold;">E-mail Address</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="Enter your email">
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="Password" class="form-label" style="color: black; font-weight: bold;">Password</label>
+                    <input type="password" class="form-control" id="Password" placeholder="At least 6 characters">
+                    <div class="mt-1 d-flex align-items-center text-muted" style="font-size: 0.9rem;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle me-2" viewBox="0 0 16 16">
+                        <path d="M8 16a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 1A9 9 0 1 1 8 0a9 9 0 0 1 0 18z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45-.054c.294-.035.352-.176.288-.469-.066-.295-.174-.369-.568-.369-.282 0-.488.146-.488.535 0 .338.176.469.488.574l.372.136c.295.11.338.246.34.518.003.326-.146.541-.488.541-.282 0-.488-.176-.488-.541h-.634c.034.65.463 1.035 1.122 1.035.762 0 1.164-.406 1.157-.998.006-.527-.207-.797-.595-.903l-.37-.136c-.23-.087-.352-.151-.35-.304.004-.16.082-.246.302-.246.22 0 .323.057.42.322l.04.16h.638c-.034-.682-.518-.951-1.174-.951-.606 0-1.028.291-1.028.846 0 .545.309.732.67.865l.366.137c.355.136.422.282.422.604 0 .437-.209.602-.55.602-.393 0-.608-.182-.608-.627h-.635c.006.693.516 1.055 1.242 1.055.806 0 1.23-.446 1.215-1.111-.007-.564-.212-.822-.655-.954z"/>
+                      </svg>
+                      Passwords must consist of at least 6 characters.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="newPassword" class="form-label" style=" color: black; font-weight: bold;">Password again</label>
+                    <input type="password" class="form-control" id="newPassword" placeholder="">
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                </form>
+                <div class="text-center mt-3">
+                  <p>Already have an account? 
+                    <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#signInModal" data-bs-dismiss="modal">Sign In</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+            <li>
+              <a href="#" class="rounded-circle bg-light p-2 mx-1">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#heart"></use></svg>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#cart"></use></svg>
+              </a>
+            </li>
+            <li class="d-lg-none">
+              <a href="#" class="rounded-circle bg-light p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                <svg width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#search"></use></svg>
+              </a>
+            </li>
+          </ul>
+          <div class="cart text-end d-none d-lg-block dropdown">
+            <button class="border-0 bg-transparent d-flex flex-column gap-2 lh-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+              <span class="fs-6 text-muted dropdown-toggle">
+                <i class="fas fa-shopping-cart"></i> <!-- Panier (cart) icon -->
+              </span>
+            </button>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row py-3">
+        <div class="d-flex justify-content-center justify-content-sm-between align-items-center">
+          <nav class="main-menu d-flex navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header justify-content-center">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              
+              <div class="offcanvas-body">
+                <select class="filter-categories border-0 mb-0 me-5">
+                  <option>Shop by Departments</option>
+                  <option>Groceries</option>
+                  <option>Drinks</option>
+                  <option>Chocolates</option>
+                </select>
+    
+                <ul class="navbar-nav justify-content-end menu-list list-unstyled d-flex gap-md-3 mb-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-dark fs-7" href="#" id="visageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                      Visage
+                    </a>
+                    <ul class="dropdown-menu shadow-lg bg-white border-0 rounded-3 p-4" aria-labelledby="visageDropdown" style="min-width: 1200px; border-radius: 10px;">
+                     
+                     
+                      <div class="row g-4">
+                        <!-- First Column -->
+                        <div class="col-md-4">
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Soins hydratants et nourrissants</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Hydratants toutes peaux</li>
+                              <li class="text-muted">Hydratants peaux normales à mixtes</li>
+                              <li class="text-muted">Hydratants peaux sèches</li>
+                              <li class="text-muted">Hydratants peaux intolérantes</li>
+                              <li class="text-muted">Hydratants peaux atopiques</li>
+                              <li class="text-muted">Soins teintés, bonne mine</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <span class="fw-semibold text-dark fs-6">Soins anti-âge et anti-rides</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Premières rides</li>
+                              <li class="text-muted">Rides installées</li>
+                              <li class="text-muted">Rides marquées, perte de fermeté</li>
+                              <li class="text-muted">Sérum Anti-âge</li>
+                              <li class="text-muted">Crème peau sèche</li>
+                              <li class="text-muted">Crème peau grasse</li>
+                              <li class="text-muted">Soin Liftant</li>
+                            </ul>
+                          </div>
+                        </div>
+                  
+                        <!-- Second Column -->
+                        <div class="col-md-4">
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Maquillage</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Rouge à lèvres</li>
+                              <li class="text-muted">Vernis à ongles</li>
+                              <li class="text-muted">Mascara</li>
+                              <li class="text-muted">Crayon et feutre à yeux, eye liner</li>
+                              <li class="text-muted">Fard à paupières</li>
+                              <li class="text-muted">Fond de teint fluide</li>
+                              <li class="text-muted">Poudre teint et compact</li>
+                              <li class="text-muted">Correcteurs de teint</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <span class="fw-semibold text-dark fs-6">Yeux et lèvres</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Soins anti-poches et cernes</li>
+                              <li class="text-muted">Contour des yeux</li>
+                              <li class="text-muted">Démaquillants yeux</li>
+                              <li class="text-muted">Sticks baumes lèvres et réparateurs</li>
+                              <li class="text-muted">Anti-âge yeux</li>
+                            </ul>
+                          </div>
+                        </div>
+                  
+                        <!-- Third Column -->
+                        <div class="col-md-4">
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Démaquillants, nettoyants visage</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Lait, mousse, émulsion</li>
+                              <li class="text-muted">Gel, crème, huile</li>
+                              <li class="text-muted">Eau, tonique, lotion</li>
+                              <li class="text-muted">Cotons démaquillants, lingettes et éponges</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <span class="fw-semibold text-dark fs-6">Soins peau grasse, mixte et acné</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Nettoyage</li>
+                              <li class="text-muted">Purifiants</li>
+                              <li class="text-muted">Matifiants</li>
+                              <li class="text-muted">Soins spécifiques</li>
+                              <li class="text-muted">Soins teintés</li>
+                              <li class="text-muted">Peaux à imperfections</li>
+                            </ul>
+                          </div>
+                        </div>
+                      
+                      </div>
+                    
+                    </ul>
+                    
+                  </li>
+                  
+                      
+                  <!--*************************************************************************************************-->
+                  
+                  
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-dark fs-7" href="#" id="visageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                      Cheveux
+                    </a>
+                    <ul class="dropdown-menu shadow-lg bg-white border-0 rounded-3 p-4" aria-labelledby="visageDropdown" style="min-width: 1200px; border-radius: 10px; left: -85px;">
+                     
+                     
+                      <div class="row g-4">
+                        <!-- First Column -->
+                        <div class="col-md-4">
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Shampoing</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Shampoing doux et fréquent</li>
+                              <li class="text-muted">Shampoing antipelliculaire</li>
+                              <li class="text-muted">Shampoing cheveux gras</li>
+                              <li class="text-muted">Shampoing cheveux secs</li>
+                              <li class="text-muted">Shampoing cheveux colorés</li>
+                              <li class="text-muted">Shampoing cheveux fins, cassants</li>
+                              <li class="text-muted">Shampoing anti-poux</li>
+                              <li class="text-muted">Shampooing sec</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <span class="fw-semibold text-dark fs-6">Après-shampooing, soin des cheveux</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">Après-shampoing</li>
+                              <li class="text-muted">Masques, baumes</li>
+                              <li class="text-muted">Soins défrisant et lissant</li>
+                              <li class="text-muted">Soins capillaires</li>
+                              <li class="text-muted">Lotion anti-poux</li>
+                            </ul>
+                            
+                          </div>
+                        </div>
+                  
+                        <!-- Second Column -->
+                        <div class="col-md-4">
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Soins anti-chute</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">shampoing anti-chute</li>
+                              <li class="text-muted">ampoules et lotions anti-chute</li>
+                           
+                            </ul>
+                          </div>
+                          <div>
+                            <span class="fw-semibold text-dark fs-6">Huiles et sérums</span>
+                            <ul class="list-unstyled ps-3">
+                              <li class="text-muted">sérums et ampoules capillaires</li>
+                              <li class="text-muted">huiles capillaires</li>
+                              
+                            </ul>
+                          </div>
+                        </div>
+                  
+                        <!-- Third Column -->
+                        <div class="col-md-4">
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Kératine</span>
+                            <ul class="list-unstyled ps-3">
+                            
+                            </ul>
+                          </div>
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Capillaire solaire</span>
+                            <ul class="list-unstyled ps-3">
+                    
+                            </ul>
+                          </div>
+
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Produits coiffants</span>
+                          
+                          </div> 
+                          
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Coloration</span>
+                           
+                          </div>
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Compléments cheveux et ongles</span>
+                           
+                          </div>
+                          <div class="mb-4">
+                            <span class="fw-semibold text-dark fs-6">Proteine Capillaire</span>
+                          
+                          </div>
+
+                        </div>
+                      
+                      </div>
+                    
+                    </ul>
+                    
+                  </li>
+
+<!--*******************************************************************************************************************************************-->
+<li class="nav-item dropdown">
+<a class="nav-link text-dark fs-7" href="#" id="corpsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Corps
+</a>
+<ul class="dropdown-menu shadow-lg bg-white border-0 rounded-3 p-4" aria-labelledby="corpsDropdown" id="corpsDropdownMenu" style="min-width: 1200px; border-radius: 10px; left: -180px;">
+
+ 
+  <div class="row g-4">
+    <!-- First Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Hydratation et nutrition corps</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">soins hydratation</li>
+          <li class="text-muted">soins hydratation peaux sèches et atopiques</li>
+          <li class="text-muted">soins hydratation anti-âge</li>
+          <li class="text-muted">soins hydratation teintés, bonne mine</li>
+        </ul>
+      </div>
+      <div>
+        <span class="fw-semibold text-dark fs-6">Epilation, dépilation, décoloration</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">crème et mousse dépilatoire</li>
+          <li class="text-muted">cire et bandes dépilatoires</li>
+          <li class="text-muted">epilateur électrique</li>
+          <li class="text-muted">soins post-épilation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Soins spécifiques</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">soins apaisants</li>
+          <li class="text-muted">peaux squameuses</li>
+          <li class="text-muted">crème cicatrisante</li>
+          <li class="text-muted">soins buste et seins</li>
+          <li class="text-muted">anti cellulite</li>
+          <li class="text-muted">éclaircissant corps</li>
+        </ul>
+      </div>
+      <div>
+        <span class="fw-semibold text-dark fs-6">Soins des pieds</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">pieds secs et abîmés</li>
+          <li class="text-muted">pansements pieds et coussinets</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Soins des mains</span>
+      </div>
+    
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Gommage et exfoliant corps
+        </span>
+    
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Jambes lourdes
+
+        </span>
+    
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Articulations
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Parfum
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Massage
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Soins minceur
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Soins repigmentant
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Nettoyant
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Accessoires
+        </span>
+      </div>
+
+
+
+    </div>
+  
+  </div>
+
+</ul>
+
+</li>
+
+
+<!--*************************************************************************************************-->
+
+<li class="nav-item dropdown">
+<a class="nav-link text-dark fs-7" href="#" id="corpsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Bébé et maman
+</a>
+<ul class="dropdown-menu shadow-lg bg-white border-0 rounded-3 p-4" aria-labelledby="corpsDropdown" id="corpsDropdownMenu" style="min-width: 1200px; border-radius: 10px; left: -257px;">
+
+ 
+  <div class="row g-4">
+    <!-- First Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Puériculture</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">biberons</li>
+          <li class="text-muted">tétines</li>
+          <li class="text-muted">sucettes</li>
+          <li class="text-muted">vaisselles de bébé</li>
+          <li class="text-muted">anneaux de dentitions</li>
+          <li class="text-muted">accessoires</li>
+          <li class="text-muted">lunettes</li>
+        </ul>
+        
+      </div>
+      <div>
+        <span class="fw-semibold text-dark fs-6">Toilette & soins bébé
+        </span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">toilette & bain de bébé</li>
+          <li class="text-muted">Hygiène et soins du bébé</li>
+          <li class="text-muted">hydratation visage et corps</li>
+          <li class="text-muted">croûtes de lait</li>
+          <li class="text-muted">massage et colique</li>
+          <li class="text-muted">protection solaire</li>
+        </ul>
+        
+      </div>
+      </div>
+    
+
+    <!-- Second Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Change de bébé</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">crème de change</li>
+          <li class="text-muted">lingettes bébé</li>
+          <li class="text-muted">couches</li>
+          <li class="text-muted">soins du siège</li>
+        </ul>
+        
+      </div>
+      <div>
+        <span class="fw-semibold text-dark fs-6">Maman</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">tests de grossesse</li>
+          <li class="text-muted">allaitement</li>
+          <li class="text-muted">compléments alimentaires</li>
+          <li class="text-muted">anti vergetures</li>
+        </ul>
+      </div>
+      
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Juvénile et jouets</span>
+      </div>
+    
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Trousseaux et cadeaux bébé
+
+        </span>
+    
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Stérilisateurs
+
+
+        </span>
+    
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Chauffe biberon
+
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Tire lait
+
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Compléments alimentaires bébé et enfant
+
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Soins spécifiques bébé et enfant
+
+        </span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Poux & lentes
+        </span>
+      </div>
+    </div>
+  
+  </div>
+
+</ul>
+
+</li>
+
+
+
+<!--*****************************************************************************************************-->
+
+
+<li class="nav-item dropdown">
+<a class="nav-link text-dark fs-7" href="#" id="santeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Compléments alimentaires
+</a>
+<ul class="dropdown-menu shadow-lg bg-white border-0 rounded-3 p-4" aria-labelledby="santeDropdown" id="santeDropdownMenu" style="min-width: 1200px; border-radius: 10px; left: -414px;">
+  <div class="row g-4">
+    <!-- Row 1 -->
+    <div class="col-md-4">
+      <span class="fw-semibold text-dark fs-6">Santé</span>
+      <ul class="list-unstyled ps-3">
+        <li class="text-muted">mémoire et concentration</li>
+        <li class="text-muted">circulation sanguine</li>
+        <li class="text-muted">digestion et transit</li>
+        <li class="text-muted">confort urinaire</li>
+        <li class="text-muted">cholestérol et cardiovasculaire</li>
+        <li class="text-muted">respiratoire</li>
+        <li class="text-muted">état Grippal</li>
+        <li class="text-muted">sphère ORL</li>
+        <li class="text-muted">immunité</li>
+        <li class="text-muted">anémie</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <span class="fw-semibold text-dark fs-6">Minceur</span>
+      <ul class="list-unstyled ps-3">
+        <li class="text-muted">ventre plat</li>
+        <li class="text-muted">draineurs et détox</li>
+        <li class="text-muted">coupe faim et satiété</li>
+        <li class="text-muted">brûle graisse</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <span class="fw-semibold text-dark fs-6">Confort</span>
+      <ul class="list-unstyled ps-3">
+        <li class="text-muted">stress</li>
+        <li class="text-muted">trouble de sommeil</li>
+        <li class="text-muted">anxiété</li>
+        <li class="text-muted">magnésium</li>
+        <li class="text-muted">articulations</li>
+        <li class="text-muted">fatigue</li>
+        <li class="text-muted">anti-douleur</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- Row 2 -->
+    <div class="col-md-4">
+      <span class="fw-semibold text-dark fs-6">Fertilité</span>
+      <ul class="list-unstyled ps-3">
+        <li class="text-muted">fertilité homme</li>
+        <li class="text-muted">fertilité femme</li>
+      </ul>
+      <span class="fw-semibold text-dark fs-6 mt-4">Anti-âge</span>
+      <ul class="list-unstyled ps-3">
+        <li class="text-muted">peau</li>
+        <li class="text-muted">yeux</li>
+        <li class="text-muted">anti Oxydant</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Ménopause</span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Stimulants sexuels</span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Prise de poids</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Bébé et enfant</span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Beauté</span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Anti-cellulite</span>
+      </div>
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Mycoses Vaginales</span>
+      </div>
+    </div>
+  </div>
+</ul>
+</li>
+
+<!--**************************************************************************************-->
+
+<li class="nav-item dropdown">
+<a class="nav-link text-dark fs-7" href="#" id="corpsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Hygiène
+</a>
+<ul class="dropdown-menu shadow-lg bg-white border-0 rounded-3 p-4" aria-labelledby="corpsDropdown" id="corpsDropdownMenu" style="min-width: 1200px; border-radius: 10px; left: -658px;">
+  <div class="row g-4">
+    <!-- First Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Puériculture</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">biberons</li>
+          <li class="text-muted">tétines</li>
+          <li class="text-muted">sucettes</li>
+          <li class="text-muted">vaisselles de bébé</li>
+          <li class="text-muted">anneaux de dentitions</li>
+          <li class="text-muted">accessoires</li>
+          <li class="text-muted">lunettes</li>
+        </ul>
+      </div>
+      <div>
+        <span class="fw-semibold text-dark fs-6">Toilette & soins bébé</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">toilette & bain de bébé</li>
+          <li class="text-muted">Hygiène et soins du bébé</li>
+          <li class="text-muted">hydratation visage et corps</li>
+          <li class="text-muted">croûtes de lait</li>
+          <li class="text-muted">massage et colique</li>
+          <li class="text-muted">protection solaire</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Change de bébé</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">crème de change</li>
+          <li class="text-muted">lingettes bébé</li>
+          <li class="text-muted">couches</li>
+          <li class="text-muted">soins du siège</li>
+        </ul>
+      </div>
+      <div>
+        <span class="fw-semibold text-dark fs-6">Maman</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">tests de grossesse</li>
+          <li class="text-muted">allaitement</li>
+          <li class="text-muted">compléments alimentaires</li>
+          <li class="text-muted">anti vergetures</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-md-4">
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Douche & bain</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">gel douche et savon liquide</li>
+          <li class="text-muted">savon et pain</li>
+          <li class="text-muted">bain (moussant, huile, sels, soins)</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Soins buccodentaires</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">brosses à dents</li>
+          <li class="text-muted">brosses à dents enfants</li>
+          <li class="text-muted">brosses à dents électriques</li>
+          <li class="text-muted">dentifrices</li>
+          <li class="text-muted">bain de bouche et solution gingivale</li>
+          <li class="text-muted">fil dentaire, brossette & accessoires</li>
+          <li class="text-muted">haleine</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Hygiène intime</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">toilette intime</li>
+          <li class="text-muted">lingettes intimes</li>
+          <li class="text-muted">serviettes hygiéniques et tampons</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Déodorants et anti-transpirants</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">déodorant aisselles</li>
+          <li class="text-muted">déodorant pieds</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Nez et oreilles</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">hygiène nasale</li>
+          <li class="text-muted">protection et nettoyage auriculaire</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Sexualité</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">préservatif</li>
+          <li class="text-muted">lubrifiant</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <span class="fw-semibold text-dark fs-6">Hygiène des mains</span>
+        <ul class="list-unstyled ps-3">
+          <li class="text-muted">gels hydroalcooliques et antibactériens</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</ul>
+</li>
+
+                  <li class="nav-item">
+                    <a href="#accessories" class="nav-link">Bio & naturel</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#accessories" class="nav-link">Matériel médical</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#accessories" class="nav-link">Homme</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+  </header>
